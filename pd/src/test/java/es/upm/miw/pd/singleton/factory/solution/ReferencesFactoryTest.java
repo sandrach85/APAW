@@ -6,20 +6,20 @@ import static org.junit.Assert.assertSame;
 
 import org.junit.Test;
 
-public class FactoryReferencesTest {
+public class ReferencesFactoryTest {
 
     @Test
-    public void testFactoryReferencesIsSingleton() {
+    public void testReferencesFactoryIsSingleton() {
         assertSame(FactoryReferences.getFactory(), FactoryReferences.getFactory());
     }
 
     @Test
-    public void testFactoryReferencesSingletonNotNull() {
+    public void testReferencesFactorySingletonNotNull() {
         assertNotNull(FactoryReferences.getFactory());
     }
 
     @Test
-    public void testFactoryReferences() {
+    public void testReferencesFactory() {
         assertEquals(0, FactoryReferences.getFactory().getReference("cero"));
         assertEquals(1, FactoryReferences.getFactory().getReference("uno"));
         FactoryReferences.getFactory().removeReference("cero");

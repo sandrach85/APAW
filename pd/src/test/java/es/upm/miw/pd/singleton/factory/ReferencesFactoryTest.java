@@ -5,12 +5,12 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
-public class FactoryReferencesTest {
-    private FactoryReferences factory;
+public class ReferencesFactoryTest {
+    private ReferencesFactory factory;
 
     @Before
     public void before() {
-        factory = new FactoryReferences();
+        factory = new ReferencesFactory();
         factory.getReference("cero");
     }
 

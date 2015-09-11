@@ -1,8 +1,9 @@
 package es.upm.miw.pd.factoryMethod.figure;
 
-
 public class FiguresManager {
+
     private Figure figure;
+
     private FigureType type;
 
     public void setType(FigureType type) {
@@ -11,11 +12,11 @@ public class FiguresManager {
 
     public void createFigure() {
         if (this.type == FigureType.CIRCLE) {
-            this.figure = new Circle("Circle", 1);
+            figure = new Circle("Circle", 1);
         } else if (this.type == FigureType.SQUARE) {
-            this.figure = new Square("Square", 1);
+            figure = new Square("Square", 1);
         } else if (this.type == FigureType.TRIANGLE) {
-            this.figure = new Triangle("Triangle", 1, 1);
+            figure = new Triangle("Triangle", 1, 1);
         } else {
             assert false : "tipo figura inesperado";
         }

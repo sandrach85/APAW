@@ -2,29 +2,24 @@ package es.upm.miw.pd.ioC;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Random;
 
-public class FactoryRandomReferences implements FactoryReferences {
-
+public class SequentialReferencesFactory implements ReferencesFactory {
     private Map<String, Integer> references;
 
-    private Random random;
+    private int reference;
 
-    public FactoryRandomReferences() {
+    public SequentialReferencesFactory() {
         this.references = new HashMap<>();
-        random = new Random();
+        this.reference = 0;
     }
 
     @Override
     public int getReference(String key) {
         Integer result = this.references.get(key);
         if (result == null) {
-            int reference = random.nextInt();
-            while (references.containsValue(reference)) {
-                reference++;
-            }
-            this.references.put(key, reference);
-            result = reference;
+            this.references.put(key, this.reference);
+            result = this.reference;
+            reference++;
         }
         return result;
     }

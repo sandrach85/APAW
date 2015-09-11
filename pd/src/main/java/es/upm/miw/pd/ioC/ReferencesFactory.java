@@ -1,6 +1,6 @@
 package es.upm.miw.pd.ioC;
 
-public interface FactoryReferences {
+public interface ReferencesFactory {
 
     public abstract int getReference(String key);
 
