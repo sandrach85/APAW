@@ -3,7 +3,7 @@ package es.upm.miw.pd.singleton.logger.solution;
 import java.util.Date;
 
 public final class Logger {
-    private static final Logger LOGGER = new Logger();
+    private static final Logger logger = new Logger();
 
     private String logs;
 
@@ -12,7 +12,7 @@ public final class Logger {
     }
 
     public static Logger getLogger() {
-        return LOGGER;
+        return logger;
     }
 
     public String getLogs() {

@@ -38,7 +38,7 @@ public class TreeNumbersTest {
         this.sub11.add(new TreeNumbers(2));
         this.sub11.add(new TreeNumbers(3));
 
-        this.sub12.add(new TreeNumbers(5));
+        this.sub12.add(new TreeNumbers(-5));
         this.sub12.add(new TreeNumbers(6));
     }
 
@@ -71,7 +71,7 @@ public class TreeNumbersTest {
 
     @Test
     public void testSumComposite() {
-        assertEquals(28, this.root.sum());
+        assertEquals(18, this.root.sum());
     }
 
     @Test

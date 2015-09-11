@@ -20,8 +20,6 @@ public class TreeNumbers {
         this.tree = null;
     }
 
-    // Esta clase es parte de una librería pública para su distribución por
-    // Internet
     public void add(TreeNumbers node) {
         if (node != null) {
             if (this.tree == null) {
