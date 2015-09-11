@@ -1,5 +1,7 @@
 package es.upm.miw.pd.doo.polymorphism.inheritance;
 
+import es.upm.miw.pd.factoryMethod.figure.Figure;
+
 public class FiguresHandler {
 
     public void addFigure(Figure figura) {

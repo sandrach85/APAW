@@ -1,4 +1,5 @@
-package es.upm.miw.pd.doo.polymorphism.inheritance;
+package es.upm.miw.pd.factoryMethod.figure;
+
 
 public class Square extends Figure {
 

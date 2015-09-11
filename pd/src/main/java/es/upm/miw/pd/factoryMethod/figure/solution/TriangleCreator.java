@@ -1,7 +1,7 @@
 package es.upm.miw.pd.factoryMethod.figure.solution;
 
-import es.upm.miw.pd.doo.polymorphism.inheritance.Figure;
-import es.upm.miw.pd.doo.polymorphism.inheritance.Triangle;
+import es.upm.miw.pd.factoryMethod.figure.Figure;
+import es.upm.miw.pd.factoryMethod.figure.Triangle;
 
 public class TriangleCreator extends FigureCreator {
 

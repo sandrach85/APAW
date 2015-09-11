@@ -1,9 +1,5 @@
 package es.upm.miw.pd.factoryMethod.figure;
 
-import es.upm.miw.pd.doo.polymorphism.inheritance.Circle;
-import es.upm.miw.pd.doo.polymorphism.inheritance.Figure;
-import es.upm.miw.pd.doo.polymorphism.inheritance.Square;
-import es.upm.miw.pd.doo.polymorphism.inheritance.Triangle;
 
 public class FiguresManager {
     private Figure figure;
