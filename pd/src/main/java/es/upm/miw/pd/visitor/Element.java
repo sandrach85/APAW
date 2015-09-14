@@ -1,5 +1,5 @@
 package es.upm.miw.pd.visitor;
 
-public interface element {
+public interface Element {
     void accept(Visitor v);
 }

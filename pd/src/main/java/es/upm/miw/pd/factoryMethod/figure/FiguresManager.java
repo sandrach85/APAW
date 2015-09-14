@@ -1,5 +1,6 @@
 package es.upm.miw.pd.factoryMethod.figure;
 
+
 public class FiguresManager {
 
     private Figure figure;

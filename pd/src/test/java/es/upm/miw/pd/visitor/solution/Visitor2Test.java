@@ -10,10 +10,10 @@ import org.junit.Test;
 
 import es.upm.miw.pd.visitor.ElementA;
 import es.upm.miw.pd.visitor.ElementB;
-import es.upm.miw.pd.visitor.element;
+import es.upm.miw.pd.visitor.Element;
 
 public class Visitor2Test {
-    private Collection<element> coleccion = new ArrayList<element>();
+    private Collection<Element> coleccion = new ArrayList<Element>();
 
     @Before
     public void ini() {
@@ -27,7 +27,7 @@ public class Visitor2Test {
     @Test
     public void testVisitorAs() {
         Visitor2 v2 = new Visitor2();
-        for (element elemento : coleccion) {
+        for (Element elemento : coleccion) {
             elemento.accept(v2);
         }
         assertEquals(3, v2.getAs());
@@ -36,7 +36,7 @@ public class Visitor2Test {
     @Test
     public void testVisitorBs() {
         Visitor2 v2 = new Visitor2();
-        for (element elemento : coleccion) {
+        for (Element elemento : coleccion) {
             elemento.accept(v2);
         }
         assertEquals(2, v2.getBs());

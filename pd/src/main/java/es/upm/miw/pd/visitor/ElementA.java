@@ -1,6 +1,6 @@
 package es.upm.miw.pd.visitor;
 
-public class ElementA implements element {
+public class ElementA implements Element {
     private String attributeA;
 
     public ElementA() {

@@ -6,7 +6,7 @@ import java.util.Collection;
 import upm.jbb.IO;
 
 public final class VisitorMain {
-    private Collection<element> coleccion = new ArrayList<element>();
+    private Collection<Element> coleccion = new ArrayList<Element>();
 
     public VisitorMain() {
         coleccion.add(new ElementA());
@@ -17,7 +17,7 @@ public final class VisitorMain {
 
     public void visitador1() {
         Visitor1 v1 = new Visitor1();
-        for (element elemento : coleccion) {
+        for (Element elemento : coleccion) {
             elemento.accept(v1);
         }
     }
