@@ -1,8 +1,5 @@
 package es.upm.miw.pd.doo.polymorphism.inheritance;
 
-import es.upm.miw.pd.factoryMethod.figure.Square;
-import es.upm.miw.pd.factoryMethod.figure.Triangle;
-
 public class FiguresMain {
 
     public static void main(String[] args) {
