@@ -1,17 +1,15 @@
 package es.upm.miw.pd.observer;
 
-import upm.jbb.IO;
-
 public final class MainObserver {
     private MainObserver() {
     }
 
     public static void main(String[] args) {
-        Sujeto sujeto = new Sujeto();
-        new ObservadorA(sujeto);
-        new ObservadorB(sujeto);
-        IO.out.println("Leo sujeto... " + sujeto.getEstado());
-        IO.out.println("Cambio sujeto...");
-        sujeto.setEstado(2);
+        Subject sujeto = new Subject();
+        new ObserverA(sujeto);
+        new ObserverB(sujeto);
+        System.out.println("Leo sujeto... " + sujeto.getState());
+        System.out.println("Se cambia sujeto...");
+        sujeto.setState(2);
     }
 }

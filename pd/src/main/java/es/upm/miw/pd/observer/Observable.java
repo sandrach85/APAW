@@ -4,19 +4,19 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Observable {
-    private final Set<Observador> lista = new HashSet<Observador>();
+    private final Set<Observer> observers = new HashSet<Observer>();
 
-    public void aniadir(Observador observador) {
-        this.lista.add(observador);
+    public void addObserver(Observer observador) {
+        this.observers.add(observador);
     }
 
-    public void quitar(Observador observador) {
-        this.lista.remove(observador);
+    public void removeObserver(Observer observador) {
+        this.observers.remove(observador);
     }
 
-    public void notificar() {
-        for (Observador observador : lista) {
-            observador.actualizar();
+    public void notifyObservers() {
+        for (Observer observer : observers) {
+            observer.update();
         }
     }
 }
