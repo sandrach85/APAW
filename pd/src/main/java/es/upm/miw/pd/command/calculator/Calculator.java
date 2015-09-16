@@ -1,10 +1,10 @@
 package es.upm.miw.pd.command.calculator;
 
-public class Calculadora {
+public class Calculator {
     private int total;
 
-    public Calculadora() {
-        this.iniciar();
+    public Calculator() {
+        this.reset();
     }
 
     public int getTotal() {
@@ -15,15 +15,15 @@ public class Calculadora {
         this.total = total;
     }
 
-    public void sumar(int valor) {
+    public void add(int valor) {
         this.setTotal(this.total + valor);
     }
 
-    public void restar(int valor) {
+    public void subtract(int valor) {
         this.setTotal(this.total - valor);
     }
 
-    public void iniciar() {
+    public void reset() {
         this.setTotal(0);
     }
 }
