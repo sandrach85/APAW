@@ -3,11 +3,11 @@ package es.upm.miw.pd.command;
 import upm.jbb.IO;
 
 public class Receptor {
-    public void accion1() {
-        IO.out.println("Acción 1");
+    public void action1() {
+        IO.getIO().println("Acción 1");
     }
 
-    public void accion2() {
-        IO.out.println("Acción 2");
+    public void action2() {
+        IO.getIO().println("Acción 2");
     }
 }

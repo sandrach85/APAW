@@ -10,7 +10,7 @@ public class DecoradorA extends Decorador {
 
     @Override
     public void view() {
-        IO.out.print(">>> ");
+        IO.getIO().print(">>> ");
         this.getC().view();
     }
 }

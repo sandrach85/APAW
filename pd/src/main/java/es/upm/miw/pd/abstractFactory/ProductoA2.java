@@ -6,7 +6,7 @@ public class ProductoA2 extends ProductoAbstractoA {
 
     @Override
     public void view() {
-        IO.out.println("ProductoA2");
+        IO.getIO().println("ProductoA2");
     }
 
 }

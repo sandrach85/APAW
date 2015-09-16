@@ -10,16 +10,16 @@ public final class MainMemento {
     private MainMemento() {
         this.gm = new GestorMementos<Memento>();
         this.o = new Originador(666);
-        IO.in.addModel(this.o);
-        IO.in.addController(this);
+        IO.getIO().addView(this.o);
+        IO.getIO().addView(this);
     }
 
     public void createMemento() {
-        this.gm.addMemento(IO.in.readString("Nombre del Memento"), o.createMemento());
+        this.gm.addMemento(IO.getIO().readString("Nombre del Memento"), o.createMemento());
     }
 
     public void restoreMemento() {
-        this.o.restoreMemento(this.gm.getMemento((String) IO.in.select(gm.keys(), "Restaurar")));
+        this.o.restoreMemento(this.gm.getMemento((String) IO.getIO().select(gm.keys(), "Restaurar")));
     }
 
     public static void main(String[] args) {

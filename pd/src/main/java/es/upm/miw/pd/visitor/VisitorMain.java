@@ -23,6 +23,6 @@ public final class VisitorMain {
     }
 
     public static void main(String[] args) {
-        IO.in.addController(new VisitorMain());
+        IO.getIO().addView(new VisitorMain());
     }
 }

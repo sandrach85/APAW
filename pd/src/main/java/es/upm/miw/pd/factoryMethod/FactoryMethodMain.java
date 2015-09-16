@@ -8,14 +8,14 @@ public class FactoryMethodMain {
     private Creator creador = creadores[0];
 
     public void tipoCreador() {
-        this.creador = (Creator) IO.in.select(creadores, "Elige un creador");
+        this.creador = (Creator) IO.getIO().select(creadores, "Elige un creador");
     }
 
     public void crearProducto() {
-        IO.out.println("Creado producto: " + this.creador.crearProducto().toString());
+        IO.getIO().println("Creado producto: " + this.creador.crearProducto().toString());
     }
 
     public static void main(String[] args) {
-        IO.in.addController(new FactoryMethodMain());
+        IO.getIO().addView(new FactoryMethodMain());
     }
 }

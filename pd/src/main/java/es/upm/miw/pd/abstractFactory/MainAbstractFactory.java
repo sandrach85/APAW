@@ -8,7 +8,7 @@ public class MainAbstractFactory {
     private FabricaAbstracta[] fas = {new FabricaConcreta1(), new FabricaConcreta2()};
 
     public void tipoFabrica() {
-        fa = (FabricaAbstracta) IO.in.select(fas, "Elige una f�brica");
+        fa = (FabricaAbstracta) IO.getIO().select(fas, "Elige una f�brica");
     }
 
     public void fabricarProductos() {
@@ -18,7 +18,7 @@ public class MainAbstractFactory {
     }
 
     public static void main(String[] args) {
-        IO.in.addController(new MainAbstractFactory());
+        IO.getIO().addView(new MainAbstractFactory());
     }
 
 }

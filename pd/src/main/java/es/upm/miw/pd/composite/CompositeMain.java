@@ -17,29 +17,29 @@ public class CompositeMain {
     }
 
     public void addCompuesto() {
-        Component com = (Component) IO.in.select(compuestos.toArray());
-        Component nuevo = new Composite(IO.in.readString("Nombre"));
+        Component com = (Component) IO.getIO().select(compuestos.toArray());
+        Component nuevo = new Composite(IO.getIO().readString("Nombre"));
         com.add(nuevo);
         this.compuestos.add(nuevo);
     }
 
     public void addHoja1() {
-        Component com = (Component) IO.in.select(compuestos.toArray());
-        com.add(new Leaf1(IO.in.readString("Nombre")));
+        Component com = (Component) IO.getIO().select(compuestos.toArray());
+        com.add(new Leaf1(IO.getIO().readString("Nombre")));
     }
 
     public void addHoja2() {
-        Component com = (Component) IO.in.select(compuestos.toArray());
-        com.add(new Leaf2(IO.in.readString("Nombre")));
+        Component com = (Component) IO.getIO().select(compuestos.toArray());
+        com.add(new Leaf2(IO.getIO().readString("Nombre")));
     }
 
     public void view() {
-        IO.out.clear();
-        IO.out.println(this.raiz.view(""));
+        IO.getIO().clear();
+        IO.getIO().println(this.raiz.view(""));
     }
 
     public static void main(String[] args) {
-        IO.in.addController(new CompositeMain());
+        IO.getIO().addView(new CompositeMain());
     }
 
 }

@@ -3,22 +3,22 @@ package es.upm.miw.pd.command;
 import upm.jbb.IO;
 
 public final class MainCommand {
-    private Invocador invocador;
+    private Invoker invocador;
 
     public MainCommand() {
         Receptor receptor = new Receptor();
-        this.invocador= new Invocador();
-        this.invocador.añadir(new OrdenConcreta1(receptor));
-        this.invocador.añadir(new OrdenConcreta2(receptor));
+        this.invocador= new Invoker();
+        this.invocador.add(new Order1(receptor));
+        this.invocador.add(new Order2(receptor));
     }
 
     public void invocador() {
-        String llave = (String) IO.in.select(this.invocador.llaves());
-        this.invocador.invocar(llave);
+        String llave = (String) IO.getIO().select(this.invocador.keys());
+        this.invocador.execute(llave);
     }
 
     public static void main(String[] args) {
-        IO.in.addController(new MainCommand());
+        IO.getIO().addView(new MainCommand());
     }
 
 }

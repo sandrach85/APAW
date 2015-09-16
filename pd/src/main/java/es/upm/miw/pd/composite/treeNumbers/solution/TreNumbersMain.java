@@ -17,33 +17,33 @@ public class TreNumbersMain {
     }
 
     public void addCompuesto() {
-        TreeNumbers com = (TreeNumbers) IO.in.select(compuestos.toArray());
+        TreeNumbers com = (TreeNumbers) IO.getIO().select(compuestos.toArray());
         if (com == null) {
             return;
         }
-        TreeNumbers nuevo = new CompositeNode(IO.in.readString("Nombre"));
+        TreeNumbers nuevo = new CompositeNode(IO.getIO().readString("Nombre"));
         com.add(nuevo);
         this.compuestos.add(nuevo);
     }
 
     public void addHoja() {
-        TreeNumbers com = (TreeNumbers) IO.in.select(compuestos.toArray());
+        TreeNumbers com = (TreeNumbers) IO.getIO().select(compuestos.toArray());
         if (com == null) {
             return;
         }
-        com.add(new LeafNode(IO.in.readInt("Valor")));
+        com.add(new LeafNode(IO.getIO().readInt("Valor")));
     }
 
     public void suma() {
-        IO.out.println("Suma: " + this.raiz.sum());
+        IO.getIO().println("Suma: " + this.raiz.sum());
     }
 
     public void mayor() {
-        IO.out.println("Mayor: " + this.raiz.higher());
+        IO.getIO().println("Mayor: " + this.raiz.higher());
     }
 
     public static void main(String[] args) {
-        IO.in.addController(new TreNumbersMain());
+        IO.getIO().addView(new TreNumbersMain());
     }
 
 }

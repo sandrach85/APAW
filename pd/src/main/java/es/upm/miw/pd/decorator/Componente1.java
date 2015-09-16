@@ -6,6 +6,6 @@ public class Componente1 extends Componente {
 
     @Override
     public void view() {
-        IO.out.print("Concreto");
+        IO.getIO().print("Concreto");
     }
 }

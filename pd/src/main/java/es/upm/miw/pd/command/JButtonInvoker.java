@@ -5,19 +5,19 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 
-public class JButtonInvocador extends JButton implements ActionListener {
+public class JButtonInvoker extends JButton implements ActionListener {
     private static final long serialVersionUID = 1L;
 
-    private Orden orden;
+    private Order orden;
 
-    public JButtonInvocador(Orden orden) {
+    public JButtonInvoker(Order orden) {
         super(orden.name());
         this.orden = orden;
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        this.orden.ejecutar();
+        this.orden.execute();
     }
 
 }

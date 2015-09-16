@@ -1,9 +1,9 @@
 package es.upm.miw.pd.command;
 
-public class OrdenConcreta2 implements Orden {
+public class Order2 implements Order {
     private Receptor receptor;
 
-    public OrdenConcreta2(Receptor receptor) {
+    public Order2(Receptor receptor) {
         this.receptor = receptor;
     }
 
@@ -13,8 +13,8 @@ public class OrdenConcreta2 implements Orden {
     }
 
     @Override
-    public void ejecutar() {
-        this.receptor.accion2();
+    public void execute() {
+        this.receptor.action2();
     }
 
 }

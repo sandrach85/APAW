@@ -19,11 +19,11 @@ public class MainCalculadora {
     }
 
     public void ejecutar() {
-        String key = (String) IO.in.select(this.gestor.keys());
+        String key = (String) IO.getIO().select(this.gestor.keys());
         this.gestor.execute(key);
     }
 
     public static void main(String[] args) {
-        IO.in.addController(new MainCalculadora());
+        IO.getIO().addView(new MainCalculadora());
     }
 }

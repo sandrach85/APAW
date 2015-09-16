@@ -6,7 +6,7 @@ public class StateMain {
     private Context c = new Context();
 
     public void state() {
-        IO.out.println(this.c.toString());
+        IO.getIO().println(this.c.toString());
     }
 
     public void accion1() {
@@ -18,6 +18,6 @@ public class StateMain {
     }
 
     public static void main(String[] args) {
-        IO.in.addController(new StateMain());
+        IO.getIO().addView(new StateMain());
     }
 }
