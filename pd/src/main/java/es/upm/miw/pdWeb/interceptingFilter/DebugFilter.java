@@ -1,6 +1,6 @@
 package es.upm.miw.pdWeb.interceptingFilter;
 
-public class DebugFilter implements Filter {
+public class DebugFilter extends Filter {
 
     @Override
     public void doFilter(Request request, Response response, FilterChain filterChain) {
