@@ -6,7 +6,7 @@ public class DebugFilter extends Filter {
     public void doFilter(Request request, Response response, FilterChain filterChain) {
         System.out.println("Debuging pre-process: " + request + "," + response);
         filterChain.doFilter(request, response);
-        response.addValue("DebugFilter");
+        response.getHeaders().put("d","DebugFilter");
         System.out.println("Debuging post-process: " + request + "," + response);
     }
 }

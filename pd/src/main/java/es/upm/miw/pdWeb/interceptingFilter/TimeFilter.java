@@ -9,7 +9,7 @@ public class TimeFilter extends Filter {
         long requestTime = new Date().getTime();
         System.out.println("Time pre-process: " + new Date());
         filterChain.doFilter(request, response);
-        response.addValue("Time");
+        response.getHeaders().put("t", "Time");
         System.out.println("Time post-process: " + (new Date().getTime() - requestTime) + "ms");
     }
 }

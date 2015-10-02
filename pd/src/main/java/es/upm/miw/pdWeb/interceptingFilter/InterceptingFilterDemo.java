@@ -10,7 +10,7 @@ public class InterceptingFilterDemo {
         Client client = new Client();
         client.setFilterManager(filterManager);
         Request request = new Request();
-        request.addValue("DEMO");
+        request.setPath("demo");
         client.sendRequest(request, new Response());
     }
 }
