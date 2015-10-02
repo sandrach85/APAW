@@ -5,8 +5,12 @@ public class FrontControllerMain {
     public static void main(String[] args) {
         Request request = new Request();
         Response response = new Response();
+        FrontController frontController = new FrontController();
+        request.setPath("Helper1");
+        frontController.doGet(request, response);
+        System.out.println("-------ooooo-------");
         request.setPath("Helper2");
-        new FrontController().doGet(request, response);
+        frontController.doGet(request, response);
     }
 
 }

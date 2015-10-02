@@ -9,7 +9,7 @@ public class Dispatcher {
             helper = (Helper) Class.forName("es.upm.miw.pdWeb.frontController." + controller).newInstance();
             nextView = helper.process(model);
         } catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
-            System.out.println("Error... " + e);
+            System.out.println("[INFO] No se encuentra el helper: " + controller);
             nextView = controller + "View";
         }
         View view;
