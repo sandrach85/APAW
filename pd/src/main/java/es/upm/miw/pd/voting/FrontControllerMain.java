@@ -13,43 +13,54 @@ public class FrontControllerMain {
         frontController = new FrontController();
     }
 
-    public void requestVerTemas() {
+    public void home(){
         Request request = new Request();
         Response response = new Response();
-        request.setPath("Themes");
-        frontController.doGet(request, response);
+        request.setPath("Home");
+        frontController.doGet(request, response);        
     }
-
-    public void requestCrearTema(String theme) {
+    
+    public void homeVoteTheme(String themeName, int value) {
         Request request = new Request();
         Response response = new Response();
-        request.getParams().put("theme", theme);
-        request.setPath("Themes");
-        frontController.doPost(request, response);
-    }
-
-    public void requestVotarTema(String theme, int value) {
-        Request request = new Request();
-        Response response = new Response();
+        request.getParams().put("action", "voteTheme");
+        request.getParams().put("themeName", themeName);
         request.getParams().put("value", "" + value);
-        request.getParams().put("theme", theme);
-        request.setPath("Themes/vote");
+        request.setPath("Home");
         frontController.doPost(request, response);
     }
+
+    public void themeManager(){
+        Request request = new Request();
+        Response response = new Response();
+        request.setPath("ThemeManager");
+        frontController.doGet(request, response);        
+    }
+    
+    public void themeManagerCreateTheme(String themeName){
+        Request request = new Request();
+        Response response = new Response();
+        request.getParams().put("action", "createTheme");
+        request.getParams().put("themeName", themeName);
+        request.setPath("ThemeManager");
+        frontController.doPost(request, response);
+    }
+    
 
     public static void main(String[] args) {
         DaoFactory.setFactory(new DaoFactoryMemory());
         FrontControllerMain main = new FrontControllerMain();
-        System.out.println("-------ooo Ver temas ooo----------------------------");
-        main.requestVerTemas();
-        System.out.println("-------ooo Crear Temas ooo----------------------------");
-        main.requestCrearTema("Tema 1");
-        main.requestCrearTema("Tema 2");
-        System.out.println("-------ooo Votar Temas ooo----------------------------");
-        main.requestVotarTema("Tema 1", 2);
-        main.requestVotarTema("Tema 1", 5);
-        main.requestVotarTema("Tema 1", 2);
-        main.requestVotarTema("Tema 2", 2);
+        System.out.println("-------ooo  Home  ooo----------------------------");
+        main.home();
+        System.out.println("-------ooo  ThemeManager  ooo----------------------------");
+        main.themeManager();
+        main.themeManagerCreateTheme("Tema 1");
+        main.themeManagerCreateTheme("Tema 2");
+        System.out.println("-------ooo  Home  ooo----------------------------");
+        main.homeVoteTheme("Tema 1", 4);
+        main.homeVoteTheme("Tema 1", 6);
+        main.homeVoteTheme("Tema 1", 5);
+        main.homeVoteTheme("Tema 2", 5);
         System.out.println("---------------------ooooo----------------------------");
     }
 
