@@ -8,7 +8,11 @@ public class FrontController {
     }
 
     public void doGet(Request request, Response response) {
-        dispatcher.process(request, response);
+        dispatcher.get(request, response);
+    }
+    
+    public void doPost(Request request, Response response) {
+        dispatcher.post(request, response);
     }
 
 }
